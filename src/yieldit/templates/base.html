@@ -36,13 +36,15 @@
             <div class="container nav">
                 <a class="brand" href="/">YieldIT</a>
                 <nav class="menu">
-                {% with site=page.get_site %}
-                    {% if site %}
-                    {% for item in site.root_page.get_children.live %}
-                        <a href="{% pageurl item %}">{{ item.title }}</a>
-                    {% endfor %}
-                    {% endif %}
-                {% endwith %}
+                    {% with site=page.get_site %}
+                        {% if site %}
+                            {% for item in site.root_page.get_children.live %}
+                                <a href="{% pageurl item %}" class="{% if page.url == item.url %}is-active{% endif %}">
+                                    {{ item.title }}
+                                </a>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </nav>
             </div>
         </header>
