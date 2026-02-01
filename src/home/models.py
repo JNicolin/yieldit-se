@@ -8,6 +8,10 @@ class HomePage(Page):
     content_panels = Page.content_panels + [
         FieldPanel("intro"),
     ]
+
+    def services(self):
+        return ServicePage.objects.child_of(self).live().order_by("title")
+    
 class ServicePage(Page):
     intro = RichTextField(blank=True)
 
