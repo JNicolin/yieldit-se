@@ -1,0 +1,15 @@
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+
+  --color-bg: #0b0f14;
+  --color-surface: #111827;
+  --color-text: #e5e7eb;
+  --color-primary: #60a5fa;
+  --color-accent: #22d3ee;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 32px;
+  --radius: 14px;
+}
