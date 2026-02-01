@@ -3,4 +3,3 @@ wagtail>=7.0,<7.1
 psycopg[binary]>=3.2,<3.3
 python-dotenv>=1.0,<2.0
 dj-database-url>=2.2,<2.3
-ls 

@@ -9,6 +9,8 @@ class HomePage(Page):
         FieldPanel("intro"),
     ]
 
+    subpage_types = ["home.StandardPage", "home.ServicePage"]
+
     def services(self):
         return ServicePage.objects.child_of(self).live().order_by("title")
     
@@ -21,3 +23,12 @@ class ServicePage(Page):
 
     parent_page_types = ["home.HomePage"]
 
+
+class StandardPage(Page):
+    body = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel("body"),
+    ]
+
+    parent_page_types = ["home.HomePage"]
